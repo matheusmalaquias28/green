@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* ─── Green Station Design Tokens ─────────────────────────────────────── */
+:root {
+  --gs-green:        #01994E;
+  --gs-green-dark:   #245A51;
+  --gs-yellow:       #FAC612;
+  --gs-bg:           #FBFBF7;
+  --gs-text:         #0E1F1A;
+  --gs-gray-50:      #F7F7F4;
+  --gs-gray-100:     #EDEDEA;
+  --gs-gray-200:     #D6D6D2;
+  --gs-gray-300:     #B5B5B0;
+  --gs-gray-400:     #8E8E88;
+  --gs-gray-500:      #6B6B65;
+  --gs-gray-600:     #4E4E49;
+  --gs-gray-700:     #3A3A36;
+  --gs-gray-800:     #27271F;
+  --gs-gray-900:     #0E1F1A;
+
+  --radius-sm:       0.5rem;
+  --radius-md:       1rem;
+  --radius-lg:       1.5rem;
+  --radius-xl:       2rem;
+  --radius-pill:     9999px;
+}
+
+@theme inline {
+  --color-brand-green:      #01994E;
+  --color-brand-green-dark: #245A51;
+  --color-brand-yellow:     #FAC612;
+  --color-brand-bg:         #FBFBF7;
+  --color-brand-text:       #0E1F1A;
+  --font-display:           var(--font-recoleta), Georgia, serif;
+  --font-body:              var(--font-manrope), system-ui, sans-serif;
+  --font-family-display:    var(--font-recoleta), Georgia, serif;
+  --font-family-body:       var(--font-manrope), system-ui, sans-serif;
+  --max-width-container:    80rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--gs-bg);
+  color: var(--gs-text);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-recoleta), Georgia, serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: var(--gs-yellow);
+  color: var(--gs-text);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gs-bg); }
+::-webkit-scrollbar-thumb { background: var(--gs-green); border-radius: 9999px; }
+
+@keyframes gs-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: gs-marquee var(--marquee-duration, 36s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+.marquee-text {
+  font-family: var(--font-recoleta), Georgia, serif;
+  font-weight: 700;
+}
+
+.btn-premium {
+  font-family: var(--font-recoleta), Georgia, serif;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-premium:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn-premium:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 2px 2px 0 #0e1f1a !important;
+}
+
+.btn-premium:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-premium:hover:not(:disabled),
+  .btn-premium:active:not(:disabled) {
+    transform: none;
+  }
+}

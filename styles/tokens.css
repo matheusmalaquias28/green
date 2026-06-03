@@ -1,0 +1,39 @@
+/* ─── Green Station Design Tokens ─────────────────────────────────────── */
+@import "tailwindcss";
+
+:root {
+  /* Cores da marca */
+  --gs-green:        #01994E;
+  --gs-green-dark:   #245A51;
+  --gs-yellow:       #FAC612;
+  --gs-bg:           #FBFBF7;
+  --gs-text:         #0E1F1A;
+
+  /* Escala de cinzas */
+  --gs-gray-50:  #F7F7F4;
+  --gs-gray-100: #EDEDEA;
+  --gs-gray-200: #D6D6D2;
+  --gs-gray-300: #B5B5B0;
+  --gs-gray-400: #8E8E88;
+  --gs-gray-500: #6B6B65;
+  --gs-gray-600: #4E4E49;
+  --gs-gray-700: #3A3A36;
+  --gs-gray-800: #27271F;
+  --gs-gray-900: #0E1F1A;
+
+  /* Tipografia */
+  --font-display: 'Recoleta', Georgia, serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
+
+  /* Espaçamentos de referência */
+  --section-y:   clamp(4rem, 8vw, 7rem);
+  --container-x: clamp(1.25rem, 5vw, 2.5rem);
+  --max-w:       80rem; /* 1280px */
+
+  /* Raios */
+  --radius-sm:  0.5rem;
+  --radius-md:  1rem;
+  --radius-lg:  1.5rem;
+  --radius-xl:  2rem;
+  --radius-pill:9999px;
+}
