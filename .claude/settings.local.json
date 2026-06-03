@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm create:*)",
+      "Bash(pnpm:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(gunzip:*)",
+      "Bash(tar -x -C /tmp/green-design/)",
+      "Read(//tmp/green-design/**)",
+      "Bash(npx tsc:*)",
+      "Bash(ls Station\\\\green-station-site\\\\public\\\\brand\\\\mascots:*)",
+      "Bash(cp:*)"
+    ]
+  }
+}
